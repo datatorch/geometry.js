@@ -29,7 +29,23 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+
+  update-docs:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch docs generate event
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: datatorch/documentation
+          event-type: generate-docs
+          client-payload: |
+            {
+              "ref": "${{ github.ref }}", 
+              "sha": "${{ github.sha }}"
+            }
 
 #   publish-gpr:
 #     needs: build
