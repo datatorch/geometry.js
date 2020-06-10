@@ -43,6 +43,7 @@ jobs:
           event-type: generate-docs
           client-payload: |
             {
+              "repository": "${{ github.repository }}"
               "ref": "${{ github.ref }}", 
               "sha": "${{ github.sha }}"
             }
