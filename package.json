@@ -8,7 +8,9 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "doc:generate": "typedoc"
+    "doc:generate": "rm -rf docs && typedoc",
+    "update": "yarn upgrade-interactive --latest",
+    "release": "standard-version"
   },
   "jest": {
     "transform": {
@@ -22,8 +24,12 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
     "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "standard-version": "^8.0.0",
     "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
     "typedoc": "^0.17.7",
     "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^3.9.5"

@@ -1,18 +1,22 @@
 import { isNumber, isObject } from './utils/type'
+import { Angle } from '.'
 
 export type AnyPoint2D = Point2D | { x: number; y: number } | [number, number]
-// export type AnyPoint3D =
-//   | Point3D
-//   | { x: number; y: number; z: number }
-//   | [number, number, number]
+export type AnyPoint3D =
+  | Point3D
+  | { x: number; y: number; z: number }
+  | [number, number, number]
 
-export abstract class Point {}
+abstract class Point {}
 
 /**
- * @name Point2D
- *
- * @class The Point2D object represents a point in the two dimensional space. It
- * is also used to represent two dimensional vector objects.
+ * WIP: This class is incomplete
+ */
+export class Point3D extends Point {}
+
+/**
+ * The Point2D object represents a point in the two dimensional space. It is
+ * also used to represent two dimensional vector objects.
  */
 export class Point2D extends Point {
   /**
@@ -146,7 +150,7 @@ export class Point2D extends Point {
    * @readonly
    */
   get angle(): number {
-    return (this.angleRadians * 180) / Math.PI
+    return Angle.toDegree(this.angleRadians)
   }
 
   /**
@@ -365,6 +369,17 @@ export class Point2D extends Point {
     return distance.length <= tolerance
   }
 
+  /**
+   * Creates a zero point with both x and y values of zero.
+   *
+   * @returns an empty point with x and y of zero
+   *
+   * @example
+   * ```js
+   * const zero = Point.zero
+   * console.log(zero) // { x: 0, y: 0 }
+   * ```
+   */
   static zero(): Point2D {
     return new Point2D(0)
   }
