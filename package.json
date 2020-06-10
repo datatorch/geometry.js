@@ -1,6 +1,6 @@
 {
   "name": "@datatorch/geometry",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Geometry libary for JavaScript",
   "main": "src/index.ts",
   "repository": "https://github.com/datatorch/geometry.js.git",
