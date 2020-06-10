@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/datatorch/geometry.js/compare/v0.0.3...v0.0.4) (2020-06-10)
+
+
+### Bug Fixes
+
+* not packing correctly ([f3396a4](https://github.com/datatorch/geometry.js/commit/f3396a4ab4c008ace7cd4d5ce356c98d4ec6232f))
+
 ### [0.0.3](https://github.com/datatorch/geometry.js/compare/v0.0.2...v0.0.3) (2020-06-10)
 
 
