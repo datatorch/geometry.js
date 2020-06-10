@@ -11,11 +11,13 @@
   "author": "jsbroks <jsbroks@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "update": "yarn upgrade-interactive --latest",
     "build": "tsc",
     "test": "jest",
     "doc:generate": "rm -rf docs && typedoc",
-    "update": "yarn upgrade-interactive --latest",
-    "release": "yarn build && standard-version"
+    "release": "rm -rf dist && yarn build && standard-version",
+    "release:push": "git push --follow-tags origin master && npm publish",
+    "release:publish": "yarn publish --non-interactive"
   },
   "jest": {
     "transform": {
