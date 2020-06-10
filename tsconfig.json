@@ -5,7 +5,7 @@
     "module": "commonjs",
     "allowJs": false,
     "declaration": true,
-    "removeComments": true,
+    "removeComments": false,
     "outDir": "dist",
 
     "strict": true,
@@ -25,5 +25,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }

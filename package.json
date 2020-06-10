@@ -2,15 +2,20 @@
   "name": "@datatorch/geometry",
   "version": "0.0.3",
   "description": "Geometry libary for JavaScript",
-  "main": "src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/datatorch/geometry.js.git",
   "author": "jsbroks <jsbroks@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "test": "jest",
     "doc:generate": "rm -rf docs && typedoc",
     "update": "yarn upgrade-interactive --latest",
-    "release": "standard-version"
+    "release": "yarn build && standard-version"
   },
   "jest": {
     "transform": {
