@@ -1,0 +1,10 @@
+{
+  "inputFiles": ["./src"],
+  "exclude": ["**/*.spec.ts"],
+  "hideGenerator": true,
+  "plugin": ["typedoc-plugin-markdown"],
+  "theme": "markdown",
+  "excludePrivate": true,
+  "excludeNotExported": true,
+  "stripInternal": true
+}

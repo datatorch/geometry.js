@@ -1,0 +1,31 @@
+{
+  "name": "@datatorch/geometry",
+  "version": "0.0.1",
+  "description": "Geometry libary for JavaScript",
+  "main": "src/index.ts",
+  "repository": "https://github.com/datatorch/geometry.js.git",
+  "author": "jsbroks <jsbroks@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "doc:generate": "typedoc"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "^.+\\.spec\\.ts$"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0",
+    "typedoc": "^0.17.7",
+    "typedoc-plugin-markdown": "^2.3.1",
+    "typescript": "^3.9.5"
+  }
+}
