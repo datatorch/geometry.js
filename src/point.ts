@@ -322,9 +322,17 @@ export class Point2D extends Point {
     return this.x * point.y - this.y * point.x
   }
 
+  /**
+   * Rotates the point by the given angle around an optional center point.
+   * The object itself is not modified.
+   *
+   * @param angle the rotation angle
+   * @param center the center point of the rotation
+   * @return the rotated point
+   */
   rotate(angle: number, center?: Point2D): Point2D {
     if (angle === 0) return this.clone()
-    angle = (angle * Math.PI) / 180
+    angle = Angle.toRadians(angle)
 
     let point = center ? this.subtract(center) : this,
       sin = Math.sin(angle),
@@ -388,7 +396,6 @@ export class Point2D extends Point {
    * Returns a new point object with the smallest {@link #x} and {@link #y} of
    * the supplied points.
    *
-   * @static
    * @param a
    * @param b
    * @return the newly created point object
@@ -418,7 +425,6 @@ export class Point2D extends Point {
    * Returns a new point object with the largest {@link #x} and {@link #y} of
    * the supplied points.
    *
-   * @static
    * @param a
    * @param b
    * @return the newly created point object

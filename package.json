@@ -10,6 +10,14 @@
   "repository": "https://github.com/datatorch/geometry.js.git",
   "author": "jsbroks <jsbroks@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "geometry",
+    "polygon",
+    "coordinate",
+    "point",
+    "2D",
+    "geometric"
+  ],
   "scripts": {
     "update": "yarn upgrade-interactive --latest",
     "clean": "rm -rf dist",

@@ -65,7 +65,7 @@ export class Rectangle extends Shape {
 
   /**
    * The bottom-left point of the rectangle.
-   * @returns bottom-lef point
+   * @returns bottom-left point
    **/
   get bottomLeft(): Point2D {
     return new Point2D(this.x, this.y + this.height)

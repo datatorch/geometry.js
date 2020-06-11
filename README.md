@@ -11,7 +11,7 @@
   <img alt="Build Status" src="https://img.shields.io/github/workflow/status/datatorch/geometry.js/Test">
 </p>
 
-A JavaScript libary for computing geometric properties. Heavily inspired by [paper.js](http://paperjs.org/).
+A JavaScript library for computing geometric properties. Heavily inspired by [paper.js](http://paperjs.org/).
 
 ```sh
 yarn add @datatorch/geometry
