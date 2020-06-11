@@ -16,8 +16,7 @@
     "build": "yarn clean && tsc",
     "test": "jest",
     "doc:generate": "rm -rf docs && typedoc",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 2 && git add CHANGELOG.md",
-    "release": "yarn build && yarn publish && yarn changelog"
+    "release": "yarn build && yarn publish"
   },
   "jest": {
     "transform": {
@@ -35,7 +34,6 @@
     "conventional-changelog-cli": "^2.0.34",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
-    "standard-changelog": "^2.0.24",
     "ts-jest": "^26.1.0",
     "ts-node": "^8.10.2",
     "typedoc": "^0.17.7",
