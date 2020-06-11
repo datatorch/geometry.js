@@ -1,6 +1,6 @@
 {
   "name": "@datatorch/geometry",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Geometry libary for JavaScript",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -40,5 +40,8 @@
     "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^3.9.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "global": "^4.4.0",
+    "standard-version": "^8.0.0"
+  }
 }
