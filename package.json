@@ -1,6 +1,6 @@
 {
   "name": "@datatorch/geometry",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Geometry libary for JavaScript",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -12,12 +12,11 @@
   "license": "MIT",
   "scripts": {
     "update": "yarn upgrade-interactive --latest",
-    "build": "tsc",
+    "clean": "rm -rf dist",
+    "build": "yarn clean && tsc",
     "test": "jest",
     "doc:generate": "rm -rf docs && typedoc",
-    "release": "rm -rf dist && yarn build && standard-version",
-    "release:push": "git push --follow-tags origin master && npm publish",
-    "release:publish": "yarn publish --non-interactive"
+    "release": "yarn build && semantic-release"
   },
   "jest": {
     "transform": {
@@ -30,15 +29,29 @@
     "testRegex": "^.+\\.spec\\.ts$"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
-    "standard-version": "^8.0.0",
+    "semantic-release": "^17.0.8",
     "ts-jest": "^26.1.0",
     "ts-node": "^8.10.2",
     "typedoc": "^0.17.7",
     "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^3.9.5"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/changelog"
+    ],
+    "branches": [
+      "master"
+    ]
   }
 }
