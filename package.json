@@ -16,7 +16,8 @@
     "build": "yarn clean && tsc",
     "test": "jest",
     "doc:generate": "rm -rf docs && typedoc",
-    "release": "yarn build && yarn publish && standard-changelog"
+    "changelog": "standard-changelog && git add CHANGELOG.md",
+    "release": "yarn build && yarn publish && yarn changelog"
   },
   "jest": {
     "transform": {
