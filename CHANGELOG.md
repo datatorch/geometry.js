@@ -1,3 +1,12 @@
+## [0.0.8](https://github.com/datatorch/geometry.js/compare/v0.0.7...v0.0.8) (2020-06-11)
+
+
+### Bug Fixes
+
+* set changelog ([126925d](https://github.com/datatorch/geometry.js/commit/126925df018e9ac0139e284087f6344250061b88))
+
+
+
 ## <small>0.0.7 (2020-06-11)</small>
 
 * v0.0.7 ([2a8bafb](https://github.com/datatorch/geometry.js/commit/2a8bafb))
