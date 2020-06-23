@@ -76,7 +76,7 @@ export class Rectangle extends Shape {
    * @returns top-right point
    **/
   get topRight(): Point2D {
-    return new Point2D(this.x + this.width, this.height)
+    return new Point2D(this.x + this.width, this.y)
   }
 
   /**
