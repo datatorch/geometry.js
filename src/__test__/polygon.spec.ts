@@ -9,13 +9,13 @@ describe('Polygon', () => {
   ])
 
   it('gets first point', () => {
-    expect(mp.firstPoint?.x).toEqual(10)
-    expect(mp.firstPoint?.y).toEqual(10)
+    expect(mp.firstPoint!.x).toEqual(10)
+    expect(mp.firstPoint!.y).toEqual(10)
   })
 
   it('gets last point', () => {
-    expect(mp.lastPoint?.x).toEqual(10)
-    expect(mp.lastPoint?.y).toEqual(30)
+    expect(mp.lastPoint!.x).toEqual(10)
+    expect(mp.lastPoint!.y).toEqual(30)
   })
 
   it('calculates correct area of polygon', () => {
