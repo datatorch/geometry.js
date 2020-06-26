@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/datatorch/geometry.js/compare/v0.0.11...v0.0.12) (2020-06-26)
+
+
+### Bug Fixes
+
+* rectangle from polygon in correct ([5daa429](https://github.com/datatorch/geometry.js/commit/5daa42957740be2efc32ef06ec110a8cdc45e52a))
+
 ### [0.0.11](https://github.com/datatorch/geometry.js/compare/v0.0.10...v0.0.11) (2020-06-23)
 
 
