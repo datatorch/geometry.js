@@ -96,14 +96,13 @@ export class Polygon extends Shape {
     const vertices = Array.isArray(polygon) ? polygon : polygon.points
     if (vertices.length === 0) return new Rectangle()
 
-    let min: Point2D | null = null
-    let max: Point2D | null = null
+    let min = new Point2D(vertices[0]).array
+    let max = new Point2D(vertices[0]).array
 
     for (const point of vertices) {
-      if (min == null) min = new Point2D(point)
-      if (max == null) max = new Point2D(point)
-      min = Point2D.min(min, new Point2D(point))
-      max = Point2D.max(min, new Point2D(point))
+      const asPoint = new Point2D(point)
+      min = [Math.min(min[0], asPoint.x), Math.min(min[1], asPoint.y)]
+      max = [Math.max(max[0], asPoint.x), Math.max(max[1], asPoint.y)]
     }
 
     return new Rectangle({ from: min!, to: max! })

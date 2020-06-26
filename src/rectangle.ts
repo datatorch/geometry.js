@@ -35,6 +35,7 @@ export class Rectangle extends Shape {
         const max = Point2D.max(from, to)
         const min = Point2D.min(from, to)
         const diff = max.subtract(min)
+        console.log(max, min, diff)
         this._set(min.x, min.y, diff.x, diff.y)
       }
     }
@@ -53,6 +54,10 @@ export class Rectangle extends Shape {
 
   get bounds(): Rectangle {
     return this
+  }
+
+  get size(): Point2D {
+    return new Point2D(this.width, this.height)
   }
 
   /**

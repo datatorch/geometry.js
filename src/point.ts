@@ -163,6 +163,10 @@ export class Point2D extends Point {
     return Math.sqrt(this.x * this.x + this.y * this.y)
   }
 
+  get array(): [number, number] {
+    return [this.x, this.y]
+  }
+
   set length(length: number) {
     const scale = length / this.length
     this.x *= scale
