@@ -152,8 +152,8 @@ export class Rectangle extends Shape {
     return new Rectangle(
       Math.min(this.x, rect.x),
       Math.min(this.y, rect.y),
-      Math.max(this.bottomRight.x, rect.bottomRight.x),
-      Math.max(this.bottomRight.y, rect.bottomRight.y)
+      Math.max(this.width, rect.width),
+      Math.max(this.height, rect.height)
     )
   }
 

@@ -39,7 +39,7 @@ export class MultiPolygon {
 
   static getBounds(polygons: (AnyPoint2D[] | Polygon)[]): Rectangle {
     if (polygons.length === 0) return new Rectangle()
-    let rect = new Rectangle()
+    let rect = Polygon.getBounds(polygons[0])
     for (const p of polygons) {
       rect = rect.unite(Polygon.getBounds(p))
     }
